@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul id="myul">
+    <li>92</li>
+    <li>94</li>
+    <li>90</li>
+    <li>82</li>
+    <li>99</li>
+</ul>
+<script type="application/javascript" src="public.js"></script>
+<script type="application/javascript">
+    var oUl=document.getElementById("myul");
+    var oLis=oUl.getElementsByTagName("li");
+
+    var arrLis = public.toArray(oLis);
+
+    console.log(arrLis);
+
+</script>
+</body>
+</html>
