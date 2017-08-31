@@ -19,7 +19,19 @@
 
     var arrLis = public.toArray(oLis);
 
-    console.log(arrLis);
+
+
+    arrLis.sort(function(a,b){return a.innerHTML-b.innerHTML});
+    var frg=document.createDocumentFragment();
+
+
+    for(i=0; i<arrLis.length; i++){
+        frg.appendChild(arrLis[i]);
+    }
+    oUl.appendChild(frg);
+    frg=null;
+
+
 
 </script>
 </body>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="application/javascript">
+    var sumNum = (a,b)=>{console.log(this);return a+b;}
+    var sumNum1= (a,b)=>a+b;
+
+    var sumi = sumNum(3,4);
+
+    function addLinks(){
+        for(var i=0; i<5; i++){
+            mylink=document.createElement("a");
+            mylink.innerHTML = i;
+            mylink.onclick=function(num){
+                return function(){
+                    alert(num);
+                }
+            }(i);
+            document.body.appendChild(mylink);
+        }
+
+
+    }
+
+    window.onload=addLinks();
+
+//    console.log(sumi);
+
+    class Numbers{
+        constructor(array){
+            this.array=array;
+        }
+        addNumber(number){
+/*            if(number!== undefined){
+                this.array.push(number);
+            }*/
+            return(number)=>{
+                console.log(this);
+                this.array.push(number);
+            }
+        }
+    }
+    var numbersObject = new Numbers([]);
+    numbersObject.addNumber(1);
+
+/*    var addMethod = numbersObject.addNumber();
+    addMethod(6);*/
+    console.log(numbersObject.array);
+
+/*    function factor(n){
+        if(n==1){
+            return 1;
+        }
+        return n*factor(n-1);
+    }
+
+    var myfactor = factor(3);
+
+    console.log(myfactor);*/
+    var numbers=([1,false,5]).filter(function(item){return typeof item=="number";});
+    console.log(numbers);
+</script>
+</body>
+</html>
