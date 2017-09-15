@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="box">1</div>
+<script type="application/javascript">
+  var obox=document.getElementById("box");
+  obox.onclick=function(e){
+      console.log(e);
+  }
+
+  obox.addEventListener("click",fun1);
+  function fun1(){console.log("i am clicked");}
+  console.dir(obox);
+</script>
+</body>
+</html>
